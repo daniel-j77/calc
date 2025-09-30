@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+body {
+  min-height: 100vh; /* Allow body to grow vertically */
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top so it can grow down */
+  padding: 5px 5px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Enable vertical scroll */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  background-color: #031b35; /* ✅ Light futuristic glowing blue */
+  padding: 30px;
+  border-radius: 25px;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#output-screen {
+  width: 300px;
+  height: 70px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  background-color: #0a1f3c;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff66 inset, 0 0 15px #00ffff55;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 15px;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3); /* more transparent */
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff22;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ffff; /* Neon blue on hover */
+  color: #000000; /* Black text on hover */
+  box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffffaa;
+  transform: scale(1.08);
+}
+
+.equal {
+  grid-column: span 2;
+  width: 145px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #00ffff;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffff33;
+}
+
+.equal:hover {
+  background-color: #00ffff;
+  color: #000000;
+  box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffffaa;
+}
+/* Operator button styles */
+.op-btn {
+  background-color: rgba(0, 0, 0, 0.5); /* transparent black */
+  color: #00ffff;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffff66;
+}
+
+/* Operator hover */
+.op-btn:hover {
+  background-color: #00ffff;
+  color: #000000;
+  box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffffaa;
+}
+.title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffffaa, 0 0 20px #00ffff88, 0 0 30px #00ffff55;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 28px;
+}
+#startup-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#startup-logo {
+  width: 380px;
+  animation: pulse 1.5s infinite;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}

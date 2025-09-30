@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>NeonCalcX</title>
+    <link rel="icon" type="image/png" href="icons/logo icon.png" />
+  </head>
+  <body>
+    <div id="startup-screen">
+      <img src="icons/logo.png" alt="NeonCalcX Logo" id="startup-logo" />
+    </div>
+    <div class="container">
+      <h1 class="title">NeonCalcX</h1>
+      <div class="calculator">
+        <input type="text" placeholder="0" id="output-screen" disabled />
+        <div class="buttons">
+         <button id="clear-btn" onclick="Clear()" class="op-btn" title="Delete (×2 clears history)">AC</button>
+         <button onclick="del()" class="op-btn" title="Backspace">DEL</button>
+         <button onclick="display('%')" class="op-btn" title="% key">%</button>
+         <button onclick="display('/')" class="op-btn" title="/ key">/</button>
+         <!-- Scientific function buttons -->
+         <button onclick="scientific('sin')" class="op-btn" title="S key: sin(θ)">sin</button>
+         <button onclick="scientific('cos')" class="op-btn" title="C key: cos(θ)">cos</button>
+         <button onclick="scientific('log')" class="op-btn" title="L key: log₁₀(x)">log</button>
+         <button onclick="scientific('tan')" class="op-btn" title="T key: tan(θ)">tan</button>
+         <button onclick="scientific('sqrt')" class="op-btn" title="R key: √x">√</button>
+         <button onclick="scientific('pow')" class="op-btn" title="^ key: xʸ">^</button>
+         <button onclick="scientific('pi')" class="op-btn" title="P key: π">π</button>
+         <button onclick="showHistory()" class="op-btn" title="H key: Show History">History</button>
+
+        <button onclick="display('7')" title="7 key">7</button>
+        <button onclick="display('8')" title="8 key">8</button>
+        <button onclick="display('9')" title="9 key">9</button>
+        <button onclick="display('*')" class="op-btn" title="* key">×</button>
+        <button onclick="display('4')" title="4 key">4</button>
+        <button onclick="display('5')" title="5 key">5</button>
+        <button onclick="display('6')" title="6 key">6</button>
+        <button onclick="display('-')" class="op-btn" title="- key">−</button>
+        <button onclick="display('1')" title="1 key">1</button>
+        <button onclick="display('2')" title="2 key">2</button>
+        <button onclick="display('3')" title="3 key">3</button>
+        <button onclick="display('+')" class="op-btn" title="+ key">+</button>
+        <button onclick="display('.')" class="op-btn" title=". key">.</button>
+        <button onclick="display('0')" title="0 key">0</button>
+        <button onclick="Calculate()" class="equal op-btn" title="= or Enter key">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
